@@ -1,0 +1,28 @@
+#validation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+input, label {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}

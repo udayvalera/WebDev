@@ -53,7 +53,34 @@ function arr(){
 function maths(){
     var a = document.getElementById('a').value;
     var b = document.getElementById('b').value;
-    console.log(typeof a, typeof b);
+    console.log(Number(a), Number(b));
+    if (isNaN(Number(a)) || isNaN(Number(b))) {
+        alert("Both inputs are not numbers");
+        return;
+    }
+    document.getElementById('result').innerHTML = `
+    <div>
+        <h3>Math Operation</h3>
+        <p>Addition Operator (+): ${Number(a)+Number(b)}</p>
+        <p>Subtraction Operator (-): ${Number(a)-Number(b)}</p>
+        <p>Multiplication Operator (*): ${Number(a)*Number(b)}</p>
+        <p>Division Operator (/): ${Number(a)/Number(b)}</p>
+        <p>Modulus Operator (%): ${Number(a)%Number(b)}</p>
+        <p>Exponential Operator (**): ${Number(a)**Number(b)}</p>
+        <p>Math.Pi: ${Math.PI}</p>
+        <p>Math.Euler: ${Math.E}</p>
+        <p>Math.Pow: ${Math.pow(Number(a),Number(b))}</p>
+        <p>Math.SQRT (a): ${Math.sqrt(Number(a))}</p>
+        <p>Math.SQRT (b): ${Math.sqrt(Number(b))}</p>
+        <p>Math.min: ${Math.min(Number(a),Number(b))}</p>
+        <p>Math.max: ${Math.max(Number(a),Number(b))}</p>
+        <p>Math.random: ${Math.random()}</p>
+        <p>Math.log(a): ${Math.log(Number(a))}</p>
+        <p>Math.log(b): ${Math.log(Number(b))}</p>
+        <p>Math.abs(a): ${Math.abs(Number(a))}</p>
+        <p>Math.abs(b): ${Math.abs(Number(b))}</p>
+    </div>
+    `;
 }
 
 function clr(){
